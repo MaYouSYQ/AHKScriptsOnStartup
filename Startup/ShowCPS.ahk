@@ -24,24 +24,26 @@ rightClickCount8 := 0
 rightClickCount9 := 0
 rightClickCountSum := 0
 dragging := 0
-winPosX := 1760
+winPosX := 1752
 winPosY := 530
 mousePosOriginalX := 0
 mousePosOriginalY := 0
-winPosFinalX := 1760
+winPosFinalX := 1752
 winPosFinalY := 530
 
 myGui := Gui()
+
 PID := WinGetPID(myGui)
 myGui.Opt("+AlwaysOnTop -Caption +ToolWindow")
-myGui.Add("Picture", "x0 y0 w124 h76", "HBITMAP:*" LoadPicture("../StartUpImages/ShowCPS.png"))
+WinSetTransparent("192", MyGui)
+myPic := myGui.Add("Picture", "x0 y0 w132 h76", "HBITMAP:*" LoadPicture("../StartupImages/ShowCPS.png"))
 myGui.SetFont("s47", "System")
-leftUpText := myGui.Add("Text", "x0 y-5 w62 Center cWhite BackgroundTrans", "  ")
-rightUpText := myGui.Add("Text", "x62 y-5 w62 Center cWhite BackgroundTrans", "  ")
+leftUpText := myGui.Add("Text", "x0 y-5 w66 Center cWhite BackgroundTrans", "  ")
+rightUpText := myGui.Add("Text", "x66 y-5 w66 Center cWhite BackgroundTrans", "  ")
 myGui.SetFont("s20", "System")
-leftDownText := myGui.Add("Text", "x0 y48 w62 Center cWhite BackgroundTrans", "  ")
-rightDownText := myGui.Add("Text", "x62 y48 w62 Center cWhite BackgroundTrans", "  ")
-myGui.Show("X1760 Y530 W124 H76 NoActivate")
+leftDownText := myGui.Add("Text", "x0 y48 w66 Center cWhite BackgroundTrans", "  ")
+rightDownText := myGui.Add("Text", "x66 y48 w66 Center cWhite BackgroundTrans", "  ")
+myGui.Show("X1752 Y530 W132 H76 NoActivate")
 
 CoordMode("Mouse", "Screen")
 
@@ -92,7 +94,7 @@ MoveWindowToTop(*) {
     leftClickCount0++
     leftClickCountSum++
     MouseGetPos(&mousePosOriginalX, &mousePosOriginalY)
-    if winPosX <= mousePosOriginalX && mousePosOriginalX <= winPosX + 124 && winPosY <= mousePosOriginalY && mousePosOriginalY <= winPosY + 76 {
+    if winPosX <= mousePosOriginalX && mousePosOriginalX <= winPosX + 132 && winPosY <= mousePosOriginalY && mousePosOriginalY <= winPosY + 76 {
         dragging := 1
     }
 }
