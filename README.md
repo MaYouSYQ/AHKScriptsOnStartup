@@ -13,17 +13,17 @@
 ## 详细介绍
 
 #### OpenApps.ahk
-![[Pasted image 20230110103248.png]](attatchments/Pasted%20image%2020230110103248.png)
+![Pasted image 20230110103248.png](attatchments/Pasted%20image%2020230110103248.png)
 * 使用 Win+Alt+某键 打开常用应用
 
 #### Settings.ahk
-![[Pasted image 20230110103555.png]](attatchments/Pasted%20image%2020230110103555.png)
+![Pasted image 20230110103555.png](attatchments/Pasted%20image%2020230110103555.png)
 * 将NumLock锁定为开启
 * 将右Alt对应到鼠标左键，将右Ctrl对应到鼠标右键
 
 #### ShowCPS.ahk
-![[Pasted image 20230110103822.png]](attatchments/Pasted%20image%2020230110103822.png)
-![[Pasted image 20230110103933.png]](attatchments/Pasted%20image%2020230110103933.png)
+![Pasted image 20230110103822.png](attatchments/Pasted%20image%2020230110103822.png)
+![Pasted image 20230110103933.png](attatchments/Pasted%20image%2020230110103933.png)
 * 创建一个GUI，记录鼠标左右键的每秒和累计点击次数 
 	* 每秒点击次数指前一秒内的总点击次数，每0.1秒更新一次
 	* 累计点击次数指窗口运行期间的总点击次数
@@ -39,7 +39,7 @@
 	* 玩一局PvZ泳池无尽大概会点1300次左键，10次右键，左键CPS在最忙的时候会达到5或6
 
 #### WindowManager.ahk
-![[Pasted image 20230110105214.png]](attatchments/Pasted%20image%2020230110105214.png)
+![Pasted image 20230110105214.png](attatchments/Pasted%20image%2020230110105214.png)
 * Win+Ctrl+方向键 移动窗口
 * Win+Ctrl+Numpad0 放大缩小窗口
 * Win+Ctrl+NumpadDot 最小化窗口
