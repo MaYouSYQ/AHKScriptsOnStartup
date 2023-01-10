@@ -1,5 +1,4 @@
 ## 文件结构
-    | - attatchments (存放着README.md用到的图片)
     | - Startup (Windows的系统文件夹，其中文件会在启动后运行)
         | - OpenApps.ahk (快捷键打开应用)
         | - Settings.ahk (包含一些设定)
@@ -7,6 +6,7 @@
         | - WindowManager.ahk (快捷键管理窗口)
     | - StartupImages (存放着脚本使用的图片)
         | - ShowCPS.png (ShowCPS.ahk的背景图片)
+    | - attatchments (存放着README.md用到的图片)
     | - README.md (本文件)
 
 
