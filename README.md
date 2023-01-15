@@ -20,6 +20,8 @@
 ![Pasted image 20230110103555.png](attatchments/Pasted%20image%2020230110103555.png)
 * 将NumLock锁定为开启
 * 将右Alt对应到鼠标左键，将右Ctrl对应到鼠标右键
+* 将 Ctrl+Win+字母 的快捷键全部禁用
+* 将 Alt+F4 禁用
 
 #### ShowCPS.ahk
 ![Pasted image 20230110103822.png](attatchments/Pasted%20image%2020230110103822.png)
