@@ -28,8 +28,11 @@ winPosX := 1752
 winPosY := 530
 mousePosOriginalX := 0
 mousePosOriginalY := 0
+mousePosOriginalX2 := 0
+mousePosOriginalY2 := 0
 winPosFinalX := 1752
 winPosFinalY := 530
+ConstantlyMoveToTop := 1
 
 myGui := Gui()
 
@@ -84,13 +87,16 @@ RightUpdate(*) {
     rightClickCount0 := 0
 }
 MoveWindowToTop(*) {
-    WinMoveTop(myGui)
+    if (ConstantlyMoveToTop == 1) {
+        WinMoveTop(myGui)
+    }
 }
 
 ~LButton::{
     global leftClickCount0, leftClickCountSum
     global winPosX, winPosY, mousePosOriginalX, mousePosOriginalY, dragging
     global activeWindow
+    global myGui
     leftClickCount0++
     leftClickCountSum++
     MouseGetPos(&mousePosOriginalX, &mousePosOriginalY)
@@ -110,6 +116,14 @@ LButton Up::{
     global rightClickCount0, rightClickCountSum
     rightClickCount0++
     rightClickCountSum++
+}
+RButton Up::{
+    global winPosX, winPosY, mousePosOriginalX2, mousePosOriginalY2, ConstantlyMoveToTop, myGui
+    MouseGetPos(&mousePosOriginalX2, &mousePosOriginalY2)
+    if winPosX <= mousePosOriginalX2 && mousePosOriginalX2 <= winPosX + 132 && winPosY <= mousePosOriginalY2 && mousePosOriginalY2 <= winPosY + 76 && Winactive(myGui) {
+        ConstantlyMoveToTop := 1 - ConstantlyMoveToTop
+        WinSetAlwaysOnTop(-1, myGui)
+    }
 }
 
 DragGui(*) {
